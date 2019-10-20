@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<set>
+    <dbClass>SQL Server Native Client 10.0</dbClass>
+    <dbUrl>localhost</dbUrl>
+    <dbName>db_marketing</dbName>
+    <dbUser>root</dbUser>
+    <dbPassword></dbPassword>
+    <dcontext>marketing</dcontext>
+    <ucontext>iba</ucontext>
+    <portbuka>8090</portbuka>
+    <regid>8740cda1f04a4c361cb4779c42e0cffe97553a476a5c3720f54ad92931fba568</regid>
+    <allowip>127.0.0.1|10.5.50.32</allowip>
+    <prd>12</prd>
+</set>

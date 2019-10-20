@@ -1,0 +1,323 @@
+{% include "supportAtas.html" %}
+<style>
+	.gridContainer{
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+		padding: 5px;
+		text-align: center;
+	}
+	table{
+		/*display: none;*/
+	}
+</style>
+{% include "supportKiri.html" %}
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Basic card -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Table Activation</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
+					</div>
+
+					<div class="card-body">
+						<div class="mb-2">
+							<div class="input-group" style="width: 30%;">
+								<input id="kode" type="number" class="form-control border-right-0" placeholder="Search...">
+								<span class="input-group-append">
+									<button id="btnKode" class="btn btn-primary"><i class="icon icon-search4"></i></button>
+								</span>
+							</div>							
+						</div>
+						<div class="gridContainer">
+							<table id="tblAktivasi" class="table table-bordered">
+								<thead class="text-center">
+									<th>Username</th>
+									<th>Nama</th>
+									<th>Alamat</th>
+									<th>Status</th>
+									<th>Action</th>
+								</thead>
+								<tbody>
+									
+								</tbody>
+							</table>
+						</div>
+						<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_large">Launch <i class="icon-play3 ml-2"></i></button>
+						<!-- Large modal -->
+						<div id="modal_large" class="modal fade" tabindex="-1">
+							<div class="modal-dialog modal-dialog-scrollable modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title">Detail Planning</h5>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+									<style>
+										p{
+											line-height: 0.5cm;
+											padding: auto;
+											margin: 0px;
+										}
+										hr{
+											padding: 10px;
+											margin: 0px;
+										}
+										.modal-body > div > .kol-1, .kol-2, .kol-3, .kol-4{
+											/*border: 1px solid black;*/
+										}
+										.bar-1{
+											display: grid;
+											grid-template-columns: repeat(2, 1fr);
+											/*border: 1px solid black;*/
+										}
+										.bar-1 .kol-2{
+											text-align: right;
+										}
+
+										.bar-2{
+											display: grid;
+											grid-template-columns: auto auto auto auto;
+											grid-template-rows: auto auto auto auto auto;
+										}
+										.bar-2 > .kol-1,.kol-2,.kol-3,.kol-4,.kol-5{
+											grid-template-rows: auto auto auto auto auto;
+										}
+
+										.bar-3{
+											display: grid;
+											grid-template-columns: auto auto auto auto auto;
+										}
+
+										.bar-4{
+											display: grid;
+											grid-template-columns: auto auto auto auto;
+										}
+										.bar-5{
+											display: grid;
+											grid-template-columns: repeat(4, 1fr);
+										}
+									</style>
+
+									<div class="modal-body">
+										<div class="bar-1">
+											<div class="kol-1">
+												<h6 class="font-weight-bold">PT. INDRAPRASTA PERKASA (Manufacture)</h6>
+												<h6 class="font-weight-bold">Jl. Pegangsaan Timur No.56, Jakarta Pusat</h6>
+											</div>
+											<div class="kol-2">
+												<button class="btn btn-success">Release</button>
+											</div>
+										</div>
+										<hr>
+										<div class="bar-2">
+											<div class="kol-1">
+												<div>Jumlah Pegawai Tetap:</div>
+												<div>Jumlah Pegawai Kontrak:</div>
+												<div>Jumlah Pegawai Outsourcing:</div>
+												<div>Jumlah Pegawai Harian:</div>
+												<div></div>
+												<div>Total Jumlah Pegawai:</div>
+											</div>
+											<div class="kol-2">
+												<div>500</div>
+												<div>400</div>
+												<div>300</div>
+												<div>200</div>
+												<div></div>
+												<div>100</div>
+											</div>
+											<div class="kol-3">
+												<div>Nama Kopkar:</div>
+												<div>Alamat Kopkar:</div>
+												<div>Nama Pengurus:</div>
+												<div>Jabatan:</div>
+											</div>
+											<div class="kol-4">
+												<div>KKS</div>
+												<div>Jl. Pegangsaan Timur No.56, Jakarta Pusat</div>
+												<div>Mr. QQ</div>
+												<div>Ketua</div>
+											</div>
+										</div>
+										<br/>
+										<div class="bar-3">
+											<div class="kol-1">
+												<h6 class="font-weight-bold">Produk yang Ditawarkan</h6>
+												<p>* PAPI FUND</p>
+												<p>* PAPI PLAFOND</p>
+												<p>* PAPI STORE</p>
+												<p>* PAPI BIZ</p>
+											</div>
+											<div class="kol-2">
+												<h6 class="font-weight-bold">Rate Produk</h6>
+												<p>* PAPI FUND</p>
+												<p>* PAPI PLAFOND</p>
+												<p>* PAPI STORE</p>
+											</div>
+											<div class="kol-3">
+												<h6 style="visibility: hidden;">a</h6>
+												<p>50%</p>
+												<p>30%</p>
+												<p>20%</p>
+											</div>
+											<div class="kol-4">
+												<h6 class="font-weight-bold">NOA Disbursed</h6>
+												<p>* PAPI FUND</p>
+												<p>* PAPI PLAFOND</p>
+												<p>* PAPI STORE</p>
+												<p>* PAPI BIZ</p>
+											</div>
+											<div class="kol-5">
+												<h6 style="visibility: hidden;">a</h6>
+												<p>243</p>
+												<p>234</p>
+												<p>43</p>
+												<p>122</p>
+											</div>
+										</div>
+										<br/>
+										<div class="bar-4">
+											<div class="kol-1">
+												<h6 class="font-weight-bold">Ticket Size</h6>
+												<p>* PAPI FUND</p>
+												<p>* PAPI PLAFOND</p>
+												<p>* PAPI STORE</p>
+												<p>* PAPI BIZ</p>
+											</div>
+											<div class="kol-2">
+												<h6 style="visibility: hidden;">a</h6>
+												<p>3.000.000 (Kelipatan 1 Juta)</p>
+												<p>200.000 (Kelipatan 100 Ribu)</p>
+												<p>2.000.000 (Kelipatan 500 Ribu)</p>
+												<p>50.000.000 (Kelipatan 5 Juta)</p>
+											</div>
+											<div class="kol-3">
+												<h6 class="font-weight-bold">Volume Disbursed</h6>
+												<p>* PAPI FUND</p>
+												<p>* PAPI PLAFOND</p>
+												<p>* PAPI STORE</p>
+												<p>* PAPI BIZ</p>
+											</div>
+											<div class="kol-4">
+												<h6 style="visibility: hidden;">a</h6>
+												<p>1.215.000.000</p>
+												<p>81.000.000</p>
+												<p>100.000.000</p>
+												<p>50.000.000</p>
+											</div>
+										</div>
+										<br/>
+										<div class="bar-5">
+											<div>
+												<h6 class="font-weight-bold">Document Collected</h6>
+												<p>* Company Profiles</p>
+												<p>* Brochure</p>
+											</div>
+											<div>
+												<h6 class="font-weight-bold">Hasil Meeting Hari ini</h6>
+												<p>Dewan menyetujui soal penjualan produk dan berapa banyak produk yang diambil dewa sangat setuju lahh pokonya hua hua hua</p>
+											</div>
+											<div></div>
+											<div>
+												<h6 class="font-weight-bold">Total Volume Disbursed</h6>
+												<p>1.446.000.000</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- <div class="modal-footer">
+										<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+										<button type="button" class="btn bg-primary">Save changes</button>
+									</div> -->
+								</div>
+							</div>
+						</div>
+						<!-- /large modal -->
+					</div>
+				</div>
+				<!-- /basic card -->
+
+			</div>
+			<!-- /content area -->
+
+		</div>
+		<!-- /main content -->
+{% include "supportBawah.html" %}
+<script>
+	var jsn = {}
+	$(document).ready(()=>{
+		$("#btnKode").trigger("click")
+	})
+
+	const getUserData = (kode)=>{
+		// let tbl = "<td colspan='5'><i class='icon icon-spinner3 spinner'></i></td>"
+		// $("#tblAktivasi").find("tbody").empty()
+		// $("#tblAktivasi").find("tbody").append(tbl)
+		$.ajax({
+			type: "POST",
+			url: "/marketing/activation/getUserData",
+			dataType: "json",
+			contentType: 'application/json',
+			data: JSON.stringify({ "kode": kode })            
+		}).done((data)=>{
+			let tbl = ""
+			for(let x in data){
+				let ini = data[x]
+				tbl+="<tr>"
+				tbl+="<td>"+ini["username"]+"</td>"
+				tbl+="<td>"+ini["nama"]+"</td>"
+				tbl+="<td>"+ini["alamat"]+"</td>"
+				let flg = (ini["flag"] == "1")? 
+				'<span class="badge badge-flat border-success text-success-600">Active</span>' : 
+				'<span class="badge badge-flat border-danger text-danger-600">Not Active</span>'
+				tbl+="<td>"+flg+"</td>"
+				let ac = (ini["flag"] == 1)? "active" : ""
+				let ac1 = (ini["flag"] == 0)? "active" : ""
+				let flag = (ini["flag"] == 1)? "onclick='changeStatusUser(\""+ini["username"]+"\", 0)'" : ""
+				let flag1 = (ini["flag"] == 0)? "onclick='changeStatusUser(\""+ini["username"]+"\", 1)'" : ""
+				let sts = '<div class="btn-group justify-content-center"><a href="#" class="btn bg-indigo-400 dropdown-toggle" data-toggle="dropdown"><i class="icon icon-menu"></i></a><div class="dropdown-menu">'
+				+'<a '+flag1+' href="#" class="dropdown-item '+ac+'">Active</a>'
+				+'<a '+flag+' href="#" class="dropdown-item '+ac1+'">Not Active</a>'
+				+'</div></div>'
+				tbl+="<td>"+sts+"</td>"
+				tbl+="</tr>"
+			}
+			if(data.length == 0) tbl+="<td colspan='5'>Data is Empty</td>"
+			$("#tblAktivasi").find("tbody").empty()
+			$("#tblAktivasi").find("tbody").append(tbl)
+		})
+	}
+
+	const changeStatusUser = (kode, to)=>{
+		$.when(
+			$.ajax({
+				type: "POST",
+				url: "/marketing/activation/changeStatusUser",
+				dataType: "json",
+				async:false,
+				contentType: 'application/json',
+				data: JSON.stringify({ "kode": kode, "to":to }),
+			})
+		).then($("#btnKode").trigger("click"))
+	}
+
+	$("#btnKode").on("click", ()=>{
+		getUserData($("#kode").val())
+	})
+	$("#kode").on("keydown", (e)=>{
+		if(e.which == 13) $("#btnKode").trigger("click")
+	})
+</script>
+</body>
+</html>

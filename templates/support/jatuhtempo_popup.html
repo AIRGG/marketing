@@ -1,0 +1,70 @@
+<!-- Vertical form modal -->
+<div id="modalJatuhTempo" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 id="modalTitle" class="modal-title"></h5>
+				<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+			</div>
+			
+			<div id="frmJatuhTempo">
+				<!-- <form id="frmUser" action="#"> -->
+					<div class="modal-body">
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-12">
+									<input type="hidden" name="kdPengumuman">
+									<label>Jabatan</label>
+									<select name="jabatan" id="" class="form-control">
+										<option value="SO">SO</option>
+										<option value="SM">SM</option>
+										<option value="SH">SH</option>
+										<option value="SA">SA</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-12">
+									<label>Date</label>
+									<input type="date" class="form-control" name="tglakhir">
+								</div>
+							</div>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+							<button id="btnSubmit" type="submit" class="btn bg-primary">Submit form</button>
+						</div>
+						<!-- </form> -->
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<!-- /vertical form modal -->
+
+<!-- Small modal -->
+<div id="modalInfoPengumuman" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Details</h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<p>Tanggal: <b id="tgl" class="font-weight-bold"></b></p>
+				<h6>Keterangan</h6>
+				<p id="ket" class="font-weight-bold"></p>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /small modal -->

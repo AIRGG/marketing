@@ -1,0 +1,130 @@
+
+<div class="sidebar sidebar-light sidebar-main sidebar-expand-md align-self-start">
+
+	<!-- Sidebar mobile toggler -->
+	<div class="sidebar-mobile-toggler text-center">
+		<a href="#" class="sidebar-mobile-main-toggle">
+			<i class="icon-arrow-left8"></i>
+		</a>
+		Main sidebar
+		<a href="#" class="sidebar-mobile-expand">
+			<i class="icon-screen-full"></i>
+			<i class="icon-screen-normal"></i>
+		</a>
+	</div>
+	<!-- /sidebar mobile toggler -->
+
+
+	<!-- Sidebar content -->
+	<div class="sidebar-content">
+		<div class="card card-sidebar-mobile">
+
+			<!-- Header -->
+			<div class="card-header header-elements-inline">
+				<h6 class="card-title">Navigation</h6>
+				<div class="header-elements">
+					<div class="list-icons">
+						<a class="list-icons-item" data-action="collapse"></a>
+					</div>
+				</div>
+			</div>
+			<!-- /header -->
+
+
+			<!-- User menu -->
+			<div class="sidebar-user">
+				<div class="card-body">
+					<div class="media">
+						<div class="mr-3">
+							<a href="#"><img src="{{url_for('static', filename='global_assets/images/image.png')}}" width="38" height="38" class="rounded-circle" alt=""></a>
+						</div>
+
+						<div class="media-body">
+							<div class="media-title font-weight-semibold">QQ</div>
+							<div class="font-size-xs opacity-50">
+								19 Oktober 2019
+							</div>
+						</div>
+
+						<div class="ml-3 align-self-center">
+							<a href="#" class="text-white"><i class="icon-cog3"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /user menu -->
+
+			<!-- Main navigation -->
+			<div class="card-body p-0">
+				<ul class="nav nav-sidebar" data-nav-type="accordion">
+					
+					<!-- Main -->
+					<!-- START ADMIN -->
+					<li class="nav-item-header mt-0"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+					{% set URL = request.path.split("/") %}
+					{% set PARAM = request.args.get("u") %}
+
+					<li class="nav-item">
+						<a href="beranda" class="nav-link {% if URL[2] == 'beranda' %}active{%endif%}">
+							<i class="icon-home4"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li class="nav-item nav-item-submenu {% if URL[2] == 'user' %}nav-item-expanded nav-item-open{%endif%}">
+						<a href="#" class="nav-link"><i class="icon-users4"></i> <span>User App</span></a>
+
+						<ul class="nav nav-group-sub" data-submenu-title="Themes">
+							<li class="nav-item">
+								<a href="user?u=sh" class="nav-link {% if PARAM == 'sh' %}active{%endif%}">Manage SH</a>
+							</li>
+							<li class="nav-item">
+								<a href="user?u=sa" class="nav-link {% if PARAM == 'sa' %}active{%endif%}">Manage SA</a>
+							</li>
+							<li class="nav-item">
+								<a href="user?u=sm" class="nav-link {% if PARAM == 'sm' %}active{%endif%}">Manage SM</a>
+							</li>
+							<li class="nav-item">
+								<a href="user?u=so" class="nav-link {% if PARAM == 'so' %}active{%endif%}">Manage SO</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="produk" class="nav-link {% if URL[2] == 'produk' %}active{%endif%}">
+							<i class="icon-cube2"></i>
+							<span>Produk</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="jatuhtempo" class="nav-link {% if URL[2] == 'jatuhtempo' %}active{%endif%}">
+							<i class="icon-calendar"></i>
+							<span>Jatuh Tempo Penginputan</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="pengumuman" class="nav-link {% if URL[2] == 'pengumuman' %}active{%endif%}">
+							<i class="icon-megaphone"></i>
+							<span>Pengumuman</span>
+						</a>
+					</li>
+					<!-- END ADMIN -->
+
+					<!-- START USER -->
+					<li class="nav-item">
+						<a href="laporan" class="nav-link {% if URL[2] == 'laporan' %}active{%endif%}">
+							<i class="icon-magazine"></i>
+							<span>Laporan</span>
+						</a>
+					</li>
+					<!-- END USER -->
+
+					<!-- /main -->
+				</ul>
+			</div>
+			<!-- /main navigation -->
+
+		</div>
+	</div>
+	<!-- /sidebar content -->
+
+</div>
+<!-- /main sidebarMain sidebar -->

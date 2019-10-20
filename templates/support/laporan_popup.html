@@ -1,0 +1,420 @@
+<!-- Large modal -->
+<div id="modalPlanning" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Detail Planning</h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<style>
+				p{
+					line-height: 0.5cm;
+					padding: auto;
+					margin: 0px;
+				}
+				hr{
+					padding: 10px;
+					margin: 0px;
+				}
+				.modal-body > div > .kol-1, .kol-2, .kol-3, .kol-4{
+					/*border: 1px solid black;*/
+				}
+				.bar-1{
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					/*border: 1px solid black;*/
+				}
+				.bar-1 .kol-2{
+					text-align: right;
+				}
+
+				.bar-2{
+					display: grid;
+					grid-template-columns: auto auto auto auto;
+					grid-template-rows: auto auto auto auto auto;
+				}
+				.bar-2 > .kol-1,.kol-2,.kol-3,.kol-4,.kol-5{
+					grid-template-rows: auto auto auto auto auto;
+				}
+
+				.bar-3{
+					display: grid;
+					grid-template-columns: auto auto auto auto auto;
+				}
+
+				.bar-4{
+					display: grid;
+					grid-template-columns: auto auto auto auto;
+				}
+				.bar-5{
+					display: grid;
+					grid-template-columns: repeat(4, 1fr);
+				}
+			</style>
+
+			<div class="modal-body">
+				<div class="bar-1">
+					<div class="kol-1">
+						<h6 class="font-weight-bold">PT. INDRAPRASTA PERKASA (Manufacture)</h6>
+						<h6 class="font-weight-bold">Jl. Pegangsaan Timur No.56, Jakarta Pusat</h6>
+					</div>
+					<div class="kol-2">
+						<!-- <button id="btnMapsPic" class="btn btn-primary">Maps & Pics</button> -->
+						<!-- <button class="btn btn-success">Release</button> -->
+					</div>
+				</div>
+				<hr>
+				<div class="bar-2">
+					<div class="kol-1">
+						<div>Jumlah Pegawai Tetap:</div>
+						<div>Jumlah Pegawai Kontrak:</div>
+						<div>Jumlah Pegawai Outsourcing:</div>
+						<div>Jumlah Pegawai Harian:</div>
+						<div></div>
+						<div>Total Jumlah Pegawai:</div>
+					</div>
+					<div class="kol-2">
+						<div>500</div>
+						<div>400</div>
+						<div>300</div>
+						<div>200</div>
+						<div></div>
+						<div>100</div>
+					</div>
+					<div class="kol-3">
+						<div>Nama Kopkar:</div>
+						<div>Alamat Kopkar:</div>
+						<div>Nama Pengurus:</div>
+						<div>Jabatan:</div>
+					</div>
+					<div class="kol-4">
+						<div>KKS</div>
+						<div>Jl. Pegangsaan Timur No.56, Jakarta Pusat</div>
+						<div>Mr. QQ</div>
+						<div>Ketua</div>
+					</div>
+				</div>
+				<br/>
+				<div class="bar-3">
+					<div class="kol-1">
+						<h6 class="font-weight-bold">Produk yang Ditawarkan</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-2">
+						<h6 class="font-weight-bold">Rate Produk</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+					</div>
+					<div class="kol-3">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>50%</p>
+						<p>30%</p>
+						<p>20%</p>
+					</div>
+					<div class="kol-4">
+						<h6 class="font-weight-bold">NOA Disbursed</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-5">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>243</p>
+						<p>234</p>
+						<p>43</p>
+						<p>122</p>
+					</div>
+				</div>
+				<br/>
+				<div class="bar-4">
+					<div class="kol-1">
+						<h6 class="font-weight-bold">Ticket Size</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-2">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>3.000.000 (Kelipatan 1 Juta)</p>
+						<p>200.000 (Kelipatan 100 Ribu)</p>
+						<p>2.000.000 (Kelipatan 500 Ribu)</p>
+						<p>50.000.000 (Kelipatan 5 Juta)</p>
+					</div>
+					<div class="kol-3">
+						<h6 class="font-weight-bold">Volume Disbursed</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-4">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>1.215.000.000</p>
+						<p>81.000.000</p>
+						<p>100.000.000</p>
+						<p>50.000.000</p>
+					</div>
+				</div>
+				<br/>
+				<div class="bar-5">
+					<div>
+						
+					</div>
+					<div>
+						
+					</div>
+					<div></div>
+					<div>
+						<h6 class="font-weight-bold">Total Volume Disbursed</h6>
+						<p>1.446.000.000</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /large modal -->
+
+<!-- Large modal -->
+<div id="modalActual" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Detail Actual</h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<style>
+				p{
+					line-height: 0.5cm;
+					padding: auto;
+					margin: 0px;
+				}
+				hr{
+					padding: 10px;
+					margin: 0px;
+				}
+				.modal-body > div > .kol-1, .kol-2, .kol-3, .kol-4{
+					/*border: 1px solid black;*/
+				}
+				.bar-1{
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					/*border: 1px solid black;*/
+				}
+				.bar-1 .kol-2{
+					text-align: right;
+				}
+
+				.bar-2{
+					display: grid;
+					grid-template-columns: auto auto auto auto;
+					grid-template-rows: auto auto auto auto auto;
+				}
+				.bar-2 > .kol-1,.kol-2,.kol-3,.kol-4,.kol-5{
+					grid-template-rows: auto auto auto auto auto;
+				}
+
+				.bar-3{
+					display: grid;
+					grid-template-columns: auto auto auto auto auto;
+				}
+
+				.bar-4{
+					display: grid;
+					grid-template-columns: auto auto auto auto;
+				}
+				.bar-5{
+					display: grid;
+					grid-template-columns: repeat(4, 1fr);
+				}
+			</style>
+
+			<div class="modal-body">
+				<div class="bar-1">
+					<div class="kol-1">
+						<h6 class="font-weight-bold">PT. INDRAPRASTA PERKASA (Manufacture)</h6>
+						<h6 class="font-weight-bold">Jl. Pegangsaan Timur No.56, Jakarta Pusat</h6>
+					</div>
+					<div class="kol-2">
+						<button id="btnMapsPic" class="btn btn-primary">Maps & Pics</button>
+						<button class="btn btn-success">Release</button>
+					</div>
+				</div>
+				<hr>
+				<div class="bar-2">
+					<div class="kol-1">
+						<div>Jumlah Pegawai Tetap:</div>
+						<div>Jumlah Pegawai Kontrak:</div>
+						<div>Jumlah Pegawai Outsourcing:</div>
+						<div>Jumlah Pegawai Harian:</div>
+						<div></div>
+						<div>Total Jumlah Pegawai:</div>
+					</div>
+					<div class="kol-2">
+						<div>500</div>
+						<div>400</div>
+						<div>300</div>
+						<div>200</div>
+						<div></div>
+						<div>100</div>
+					</div>
+					<div class="kol-3">
+						<div>Nama Kopkar:</div>
+						<div>Alamat Kopkar:</div>
+						<div>Nama Pengurus:</div>
+						<div>Jabatan:</div>
+					</div>
+					<div class="kol-4">
+						<div>KKS</div>
+						<div>Jl. Pegangsaan Timur No.56, Jakarta Pusat</div>
+						<div>Mr. QQ</div>
+						<div>Ketua</div>
+					</div>
+				</div>
+				<br/>
+				<div class="bar-3">
+					<div class="kol-1">
+						<h6 class="font-weight-bold">Produk yang Ditawarkan</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-2">
+						<h6 class="font-weight-bold">Rate Produk</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+					</div>
+					<div class="kol-3">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>50%</p>
+						<p>30%</p>
+						<p>20%</p>
+					</div>
+					<div class="kol-4">
+						<h6 class="font-weight-bold">NOA Disbursed</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-5">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>243</p>
+						<p>234</p>
+						<p>43</p>
+						<p>122</p>
+					</div>
+				</div>
+				<br/>
+				<div class="bar-4">
+					<div class="kol-1">
+						<h6 class="font-weight-bold">Ticket Size</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-2">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>3.000.000 (Kelipatan 1 Juta)</p>
+						<p>200.000 (Kelipatan 100 Ribu)</p>
+						<p>2.000.000 (Kelipatan 500 Ribu)</p>
+						<p>50.000.000 (Kelipatan 5 Juta)</p>
+					</div>
+					<div class="kol-3">
+						<h6 class="font-weight-bold">Volume Disbursed</h6>
+						<p>* PAPI FUND</p>
+						<p>* PAPI PLAFOND</p>
+						<p>* PAPI STORE</p>
+						<p>* PAPI BIZ</p>
+					</div>
+					<div class="kol-4">
+						<h6 style="visibility: hidden;">a</h6>
+						<p>1.215.000.000</p>
+						<p>81.000.000</p>
+						<p>100.000.000</p>
+						<p>50.000.000</p>
+					</div>
+				</div>
+				<br/>
+				<div class="bar-5">
+					<div>
+						<h6 class="font-weight-bold">Document Collected</h6>
+						<p>* Company Profiles</p>
+						<p>* Brochure</p>
+					</div>
+					<div>
+						<h6 class="font-weight-bold">Hasil Meeting Hari ini</h6>
+						<p>Dewan menyetujui soal penjualan produk dan berapa banyak produk yang diambil dewa sangat setuju lahh pokonya hua hua hua</p>
+					</div>
+					<div></div>
+					<div>
+						<h6 class="font-weight-bold">Total Volume Disbursed</h6>
+						<p>1.446.000.000</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /large modal -->
+
+<!-- Large modal -->
+<div id="modalMapsPic" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Maps & PIC</h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-content">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card-img-actions">
+							<a href="{{url_for('static', filename='global_assets/images/signature.png')}}" data-popup="lightbox">
+								<img class="card-img-top img-fluid" src="{{url_for('static', filename='global_assets/images/signature.png')}}" alt="" style="width: 200px; height: auto; vertical-align: center;">
+								<span class="card-img-actions-overlay card-img-top">
+									<i class="icon-plus3 icon-2x"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card-img-actions">
+							<a href="{{url_for('static', filename='global_assets/images/signature.png')}}" data-popup="lightbox">
+								<img class="card-img-top img-fluid" src="{{url_for('static', filename='global_assets/images/signature.png')}}" alt="" style="width: 200px; height: auto; vertical-align: center;">
+								<span class="card-img-actions-overlay card-img-top">
+									<i class="icon-plus3 icon-2x"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card-img-actions">
+							<a href="{{url_for('static', filename='global_assets/images/signature.png')}}" data-popup="lightbox">
+								<img class="card-img-top img-fluid" src="{{url_for('static', filename='global_assets/images/signature.png')}}" alt="" style="width: 200px; height: auto; vertical-align: center;">
+								<span class="card-img-actions-overlay card-img-top">
+									<i class="icon-plus3 icon-2x"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-md-12 text-center">
+						MAPS
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

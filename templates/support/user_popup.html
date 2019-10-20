@@ -1,0 +1,98 @@
+<!-- Vertical form modal -->
+<div id="modalUser" class="modal fade" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 id="modalTitle" class="modal-title"></h5>
+				<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+			</div>
+			
+			<div id="frmUser">
+				<!-- <form id="frmUser" action="#"> -->
+					<div class="modal-body">
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-6">
+									<input type="hidden" name="userID">
+									<label>User ID</label>
+									<input type="text" name="userid" class="form-control">
+								</div>
+								<div class="col-sm-6">
+									<label>Password</label>
+									<input type="password" name="password" class="form-control">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-6">
+									<label>No HP</label>
+									<input type="text" name="nohp" class="form-control">
+								</div>
+								<div class="col-sm-6">
+									<label>Group</label>
+									<select name="group" id="" class="form-control">
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-6">
+									<label>Level</label>
+									<select name="level" id="" class="form-control">
+										<option value="SO">SO</option>
+										<option value="SM">SM</option>
+										<option value="SH">SH</option>
+									</select>
+								</div>
+								{% if params["lvl"] == "SO" %}
+								<div class="col-sm-6">
+									<label>Group SM</label>
+									<select name="groupsm" id="" class="form-control">
+										<option value="SM1">SM1</option>
+										<option value="SM2">SM2</option>
+									</select>
+								</div>
+								{% endif %}
+							</div>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+							<button id="btnSubmitUser" type="submit" class="btn bg-primary">Submit form</button>
+						</div>
+						<!-- </form> -->
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<!-- /vertical form modal -->
+
+<!-- Small modal -->
+<div id="modalInfoPengumuman" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Details</h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<p>Tanggal: <b id="tgl" class="font-weight-bold"></b></p>
+				<h6>Keterangan</h6>
+				<p id="ket" class="font-weight-bold"></p>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /small modal -->

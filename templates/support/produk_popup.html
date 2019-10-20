@@ -1,0 +1,82 @@
+<!-- Vertical form modal -->
+<div id="modalProduk" class="modal fade" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 id="modalTitle" class="modal-title"></h5>
+				<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+			</div>
+			
+			<div id="frmProduk">
+			<!-- <form id="frmUser" action="#"> -->
+				<div class="modal-body">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6">
+								<input type="hidden" name="kdPRDk">
+								<label>Kode Produk</label>
+								<input type="text" name="kdprdk" placeholder="Kode Produk..." class="form-control">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-12">
+								<label>Nama Produk</label>
+								<input type="text" name="nmprdk" placeholder="Nama Produk..." class="form-control">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-4">
+								<label>Rate</label>
+								<input type="text" name="rate" placeholder="Rate..." class="form-control">
+							</div>
+
+							<div class="col-sm-8">
+								<label>Kelipatan Nom.</label>
+								<input type="text" name="kelipatan" placeholder="Kelipatan..." class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+					<button id="btnSubmit" type="submit" class="btn bg-primary">Submit form</button>
+				</div>
+			<!-- </form> -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /vertical form modal -->
+
+<!-- Small modal -->
+<div id="modalInfoProduk" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Details</h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<h6>Nama Produk</h6>
+				<p id="nmProduk" class="font-weight-bold">GGG</p>
+				<h6>Rate Produk</h6>
+				<p id="rateProduk" class="font-weight-bold">GGG</p>
+				<h6>Kelipatan</h6>
+				<p id="klptnProduk" class="font-weight-bold">GGG</p>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /small modal -->

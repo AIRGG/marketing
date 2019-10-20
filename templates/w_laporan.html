@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Marketing - NET</title>
+	{% include "support/cssjs.html" %}
+</head>
+<body class="navbar-md-md-top">
+	{% include "support/navbar.html" %}
+	<!-- Page content -->
+	<div class="page-content pt-0">
+		{% include "support/sidebar.html" %}
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Basic card -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Laporan</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
+					</div>
+
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-5">
+								<div class="form-group">
+									<select name="" id="" class="form-control">
+										<option value="SM1">SM1</option>
+										<option value="SM2">SM2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="chart-container">
+		                            <div class="chart has-fixed-height w-100" id="columns_basic"></div>
+		                        </div>	
+							</div>
+						</div>
+						<div class="row mt-4">
+							<div class="col-md-12">
+								<table class="table table-bordered table-hover">
+									<thead class="text-center">
+										<th>#</th>
+										<th>Nama SO</th>
+										<th>Status</th>
+										<th>Action</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>SO1</td>
+											<td class="text-center">
+												<span class="badge badge-primary">Waiting</span>
+											</td>
+											<td class="text-center">
+												<div class="dropdown">
+													<button class="btn btn-sm btn-primary btn-plan">Plan</button>
+													&nbsp;
+													<button class="btn btn-sm btn-success btn-act">Actual</button>
+													&nbsp;
+													<a href="#" class="badge bg-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="icon-menu"></i></a>
+
+													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(71px, 21px, 0px);">
+														<a href="#" class="dropdown-item">
+															<span class="badge badge-mark mr-2 border-success"></span>
+															Approved
+														</a>
+														<a href="#" class="dropdown-item">
+															<span class="badge badge-mark mr-2 border-danger"></span>
+															Disposal
+														</a>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>SO2</td>
+											<td class="text-center">
+												<span class="badge badge-danger">Disposal</span>
+											</td>
+											<td class="text-center">
+												<div class="dropdown">
+													<button class="btn btn-sm btn-primary btn-plan">Plan</button>
+													&nbsp;
+													<button class="btn btn-sm btn-success btn-act">Actual</button>
+													&nbsp;
+													<a href="#" class="badge bg-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="icon-menu"></i></a>
+
+													<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(71px, 21px, 0px);">
+														<a href="#" class="dropdown-item">
+															<span class="badge badge-mark mr-2 border-success"></span>
+															Approved
+														</a>
+														<a href="#" class="dropdown-item">
+															<span class="badge badge-mark mr-2 border-danger"></span>
+															Disposal
+														</a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								{% include "support/laporan_popup.html" %}
+								<!-- <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalLaporan">Launch <i class="icon-play3 ml-2"></i></button> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /basic card -->
+
+			</div>
+			<!-- /content area -->
+
+		</div>
+		<!-- /main content -->
+	</div>
+<script>
+$('[data-popup="lightbox"]').fancybox({
+	padding: 3
+});
+
+
+$(".btn-plan").on("click", function(){
+	$("#modalPlanning").modal("show")
+})
+
+$(".btn-act").on("click", function(){
+	$("#modalActual").modal("show")
+})
+
+$("#btnMapsPic").on("click", function(){
+	$("#modalActual").modal("hide")
+	$("#modalMapsPic").modal("show")
+})
+
+$("#modalMapsPic").on("hidden.bs.modal", function(){
+	$("#modalActual").modal("show")
+})
+
+$("select").on("change", function () {
+	$(".chart-container").empty()
+	$(".chart-container").html('<div class="chart has-fixed-height w-100" id="columns_basic"></div>')
+	activeChart()
+})
+
+function activeChart() {
+	var columns_basic_element = document.getElementById('columns_basic');
+	// Initialize chart
+	var columns_basic = echarts.init(columns_basic_element);
+
+
+	//
+	// Chart config
+	//
+
+	// Options
+	columns_basic.setOption({
+
+	    // Define colors
+	    color: ['#2ec7c9', '#b6a2de', '#5ab1ef', '#ffb980', '#d87a80'],
+
+	    // Global text styles
+	    textStyle: {
+	        fontFamily: 'Roboto, Arial, Verdana, sans-serif',
+	        fontSize: 13
+	    },
+
+	    // Chart animation duration
+	    animationDuration: 750,
+
+	    // Setup grid
+	    grid: {
+	        left: 0,
+	        right: 40,
+	        top: 35,
+	        bottom: 0,
+	        containLabel: true
+	    },
+
+	    // Add legend
+	    legend: {
+	        data: ['Actual', 'Planning'],
+	        itemHeight: 8,
+	        itemGap: 20,
+	        textStyle: {
+	            padding: [0, 5]
+	        }
+	    },
+
+	    // Add tooltip
+	    tooltip: {
+	        trigger: 'axis',
+	        backgroundColor: 'rgba(0,0,0,0.75)',
+	        padding: [10, 15],
+	        textStyle: {
+	            fontSize: 13,
+	            fontFamily: 'Roboto, sans-serif'
+	        }
+	    },
+
+	    // Horizontal axis
+	    xAxis: [{
+	        type: 'category',
+	        data: ['SO1', 'SO2', 'SO3', 'SO4', 'SO5', 'SO6', 'SO7', 'SO8', 'SO9', 'SO10', 'SO11', 'SO12'],
+	        axisLabel: {
+	            color: '#333'
+	        },
+	        axisLine: {
+	            lineStyle: {
+	                color: '#999'
+	            }
+	        },
+	        splitLine: {
+	            show: true,
+	            lineStyle: {
+	                color: '#eee',
+	                type: 'dashed'
+	            }
+	        }
+	    }],
+
+	    // Vertical axis
+	    yAxis: [{
+	        type: 'value',
+	        axisLabel: {
+	            color: '#333'
+	        },
+	        axisLine: {
+	            lineStyle: {
+	                color: '#999'
+	            }
+	        },
+	        splitLine: {
+	            lineStyle: {
+	                color: ['#eee']
+	            }
+	        },
+	        splitArea: {
+	            show: true,
+	            areaStyle: {
+	                color: ['rgba(250,250,250,0.1)', 'rgba(0,0,0,0.01)']
+	            }
+	        }
+	    }],
+
+	    // Add series
+	    series: [{
+	            name: 'Planning',
+	            type: 'bar',
+	            data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+	            itemStyle: {
+	                normal: {
+	                    label: {
+	                        show: true,
+	                        position: 'top',
+	                        textStyle: {
+	                            fontWeight: 500
+	                        }
+	                    }
+	                }
+	            },
+	            // markLine: {
+	            //     data: [{type: 'average', name: 'Average'}]
+	            // }
+	        },
+	        {
+	            name: 'Actual',
+	            type: 'bar',
+	            data: [2.6, 5.9, 9.0, 26.4, 58.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+	            itemStyle: {
+	                normal: {
+	                    label: {
+	                        show: true,
+	                        position: 'top',
+	                        textStyle: {
+	                            fontWeight: 500
+	                        }
+	                    }
+	                }
+	            },
+	            // markLine: {
+	            //     data: [{type: 'average', name: 'Average'}]
+	            // }
+	        }
+	    ]
+	});
+}
+
+</script>
+</body>
+</html>
